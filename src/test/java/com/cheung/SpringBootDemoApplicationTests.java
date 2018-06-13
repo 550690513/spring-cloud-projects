@@ -1,4 +1,4 @@
-package com.cheung.springbootdemo;
+package com.cheung;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
