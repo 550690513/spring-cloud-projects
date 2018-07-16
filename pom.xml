@@ -11,6 +11,12 @@
 
 	<modules>
 		<module>01-spring-boot-yml</module>
+		<module>02-spring-boot-logback</module>
+		<module>03-spring-boot-multi-env</module>
+		<module>04-spring-boot-exception</module>
+		<module>05-spring-boot-actuator</module>
+		<module>06-spring-boot-helloworld</module>
+		<module>06-spring-boot-server</module>
 	</modules>
 
 </project>
