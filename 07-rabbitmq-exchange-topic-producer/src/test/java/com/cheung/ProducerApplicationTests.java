@@ -1,8 +1,8 @@
 package com.cheung;
 
-import com.cheung.mq.OrderLogSender;
-import com.cheung.mq.ProductLogSender;
-import com.cheung.mq.UserLogSender;
+import com.cheung.mq.OrderLogMqSender;
+import com.cheung.mq.ProductLogMqSender;
+import com.cheung.mq.UserLogMqSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,19 +14,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ProducerApplicationTests {
 
 	@Autowired
-	private UserLogSender userLogSender;
+	private UserLogMqSender userLogMqSender;
 
 	@Autowired
-	private ProductLogSender productLogSender;
+	private ProductLogMqSender productLogMqSender;
 
 	@Autowired
-	private OrderLogSender orderLogSender;
+	private OrderLogMqSender orderLogMqSender;
 
 	@Test
 	public void testSend() throws InterruptedException {
-		this.userLogSender.send("test user log");
-		this.productLogSender.send("test product log");
-		this.orderLogSender.send("test order log");
+		this.userLogMqSender.send("test user log");
+		this.productLogMqSender.send("test product log");
+		this.orderLogMqSender.send("test order log");
 		Thread.sleep(1000);
 	}
 

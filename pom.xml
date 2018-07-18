@@ -22,6 +22,8 @@
 		<module>07-rabbitmq-exchange-direct-producer</module>
 		<module>07-rabbitmq-exchange-topic-consumer</module>
 		<module>07-rabbitmq-exchange-topic-producer</module>
+		<module>07-rabbitmq-exchange-fanout-consumer</module>
+		<module>07-rabbitmq-exchange-fanout-producer</module>
 	</modules>
 
 </project>

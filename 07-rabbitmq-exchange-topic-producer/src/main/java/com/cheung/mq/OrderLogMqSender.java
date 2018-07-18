@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @author Cheung
  */
 @Component
-public class OrderLogSender {
+public class OrderLogMqSender {
 
 	private static final String ORDER_LOG_DEBUG = "order.log.debug";
 	private static final String ORDER_LOG_INFO = "order.log.info";

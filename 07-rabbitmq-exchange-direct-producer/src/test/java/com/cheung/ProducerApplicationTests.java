@@ -1,6 +1,6 @@
 package com.cheung;
 
-import com.cheung.mq.LogSender;
+import com.cheung.mq.LogMqSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,20 +12,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ProducerApplicationTests {
 
 	@Autowired
-	private LogSender logSender;
+	private LogMqSender logMqSender;
 
 	@Test
-	public void testSendInfoLog() throws InterruptedException {
+	public void testSendMqForInfoLog() throws InterruptedException {
 		for (int i = 0; i < 100; i++) {
-			this.logSender.sendInfoLog("test info log --> " + i);
+			this.logMqSender.sendMqForInfoLog("test info log --> " + i);
 			Thread.sleep(1000);
 		}
 	}
 
 	@Test
-	public void testSendErrorLog() throws InterruptedException {
+	public void testSendMqForErrorLog() throws InterruptedException {
 		for (int i = 0; i < 100; i++) {
-			this.logSender.sendErrorLog("test error log --> " + i);
+			this.logMqSender.sendMqForErrorLog("test error log --> " + i);
 			Thread.sleep(1000);
 		}
 	}

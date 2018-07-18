@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @author Cheung
  */
 @Component
-public class LogSender {
+public class LogMqSender {
 
 	@Autowired
 	private AmqpTemplate amqpTemplate;
@@ -39,7 +39,7 @@ public class LogSender {
 	 *
 	 * @param msg
 	 */
-	public void sendInfoLog(String msg) {
+	public void sendMqForInfoLog(String msg) {
 		/*
 		 * 参数一：交换器名称
 		 * 参数二：路由键
@@ -54,7 +54,7 @@ public class LogSender {
 	 *
 	 * @param msg
 	 */
-	public void sendErrorLog(String msg) {
+	public void sendMqForErrorLog(String msg) {
 		/*
 		 * 参数一：交换器名称
 		 * 参数二：路由键
