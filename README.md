@@ -16,3 +16,11 @@
 >* 07-rabbitmq-demo
 >* 07-rabbitmq-exchange-direct-consumer
 >* 07-rabbitmq-exchange-direct-producer
+>* 07-rabbitmq-exchange-topic-consumer
+>* 07-rabbitmq-exchange-topic-producer
+>* 07-rabbitmq-exchange-fanout-consumer
+>* 07-rabbitmq-exchange-fanout-producer
+>* 07-rabbitmq-durable-consumer
+>* 07-rabbitmq-durable-producer
+>* 07-rabbitmq-ack-consumer
+>* 07-rabbitmq-ack-producer
