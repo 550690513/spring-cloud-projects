@@ -46,7 +46,7 @@ public class LogMqSender {
 		 * 参数三：消息
 		 */
 		this.amqpTemplate.convertAndSend(this.exchange, this.infoRoutingKey, msg);
-		System.out.printf("InfoLogSender：%s\r\n", msg);
+		System.out.printf("InfoLogMqSender：%s\r\n", msg);
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class LogMqSender {
 		 * 参数三：消息
 		 */
 		this.amqpTemplate.convertAndSend(this.exchange, this.errorRoutingKey, msg);
-		System.out.printf("ErrorLogSender：%s\r\n", msg);
+		System.out.printf("ErrorLogMqSender：%s\r\n", msg);
 	}
 
 
