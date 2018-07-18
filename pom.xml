@@ -15,8 +15,13 @@
 		<module>03-spring-boot-multi-env</module>
 		<module>04-spring-boot-exception</module>
 		<module>05-spring-boot-actuator</module>
-		<module>06-spring-boot-helloworld</module>
-		<module>06-spring-boot-server</module>
+		<module>06-spring-boot-admin</module>
+		<module>06-spring-boot-client</module>
+		<module>07-rabbitmq-demo</module>
+		<module>07-rabbitmq-exchange-direct-consumer</module>
+		<module>07-rabbitmq-exchange-direct-producer</module>
+		<module>07-rabbitmq-exchange-topic-consumer</module>
+		<module>07-rabbitmq-exchange-topic-producer</module>
 	</modules>
 
 </project>
