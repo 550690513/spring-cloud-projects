@@ -24,3 +24,8 @@
 >* 07-rabbitmq-durable-producer
 >* 07-rabbitmq-ack-consumer
 >* 07-rabbitmq-ack-producer
+
+>* 08-spring-cloud-eureka-server
+>* 08-spring-cloud-eureka-server-ha-cluster
+>* 08-spring-cloud-eureka-client-producer
+>* 08-spring-cloud-eureka-client-consumer

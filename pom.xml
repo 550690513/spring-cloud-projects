@@ -28,6 +28,10 @@
 		<module>07-rabbitmq-durable-producer</module>
 		<module>07-rabbitmq-ack-consumer</module>
 		<module>07-rabbitmq-ack-producer</module>
+		<module>08-spring-cloud-eureka-server</module>
+		<module>08-spring-cloud-eureka-server-ha-cluster</module>
+		<module>08-spring-cloud-eureka-client-producer</module>
+		<module>08-spring-cloud-eureka-client-consumer</module>
 	</modules>
 
 </project>
