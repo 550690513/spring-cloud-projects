@@ -56,6 +56,12 @@
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
+		<!-- producer客户端配置“优雅停服”，第一步需要添加actuator执行器的启动器 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
