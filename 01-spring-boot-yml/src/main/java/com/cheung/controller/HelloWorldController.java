@@ -13,8 +13,11 @@ import java.util.Map;
 @RestController
 public class HelloWorldController {
 
-	@Value(value = "${hello.msg2}")
+	@Value(value = "${hello.msg}")
 	private String msg;
+
+	@Value(value = "${hello.msg2}")
+	private String msg2;
 
 	@Value(value = "${author}")
 	private String author;
@@ -27,6 +30,7 @@ public class HelloWorldController {
 	public Map<String, Object> showHelloWorld() {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("msg", this.msg);
+		map.put("msg2", this.msg2);
 		map.put("author", this.author);
 		map.put("randomInt", this.randomInt);
 		return map;

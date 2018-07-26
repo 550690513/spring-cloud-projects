@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 public class HelloWorldController {
 
-	@Value(value = "${hello.msg2}")
+	@Value(value = "${hello.msg}")
 	private String msg;
 
 	@Value(value = "${author}")

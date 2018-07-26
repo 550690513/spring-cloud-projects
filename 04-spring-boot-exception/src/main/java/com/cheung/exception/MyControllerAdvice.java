@@ -8,8 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * * @ControllerAdvice注解：表示该类为异常处理类
+ *
  * @author Cheung
- * @ControllerAdvice 表示该类为异常处理类
  */
 @ControllerAdvice
 public class MyControllerAdvice {

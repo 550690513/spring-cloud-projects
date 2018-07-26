@@ -1,7 +1,7 @@
 ### yml配置文件的语法
 ### 1.在properties文件中是以“.”进行分割，在yml中使用“：”进行分割
 ### 2.yml的数据格式和json的格式很像，都是K-V结构的。并且是通过“：”赋值
-### 3.在yml中缩进一定不能使用TAB键，否则会报错。
+### 3.在yml中缩进一定不能使用TAB键，否则会报错
 ### 4.每个K的冒号后面一定要加一个空格
 
 
@@ -11,12 +11,12 @@
 #  port: 8888
 
 #配置自定义属性
-name: spring-boot-hello
+name: spring-boot-yml
 author: https://github.com/550690513
 #配置变量的引用
 hello:
   msg: This is a Application named by "${name}".
-  msg2: heihei2222
+  msg2: hello
 
 #生成随机值（配置文件只有在项目启动时才被解析一次，所以该随机值生成后就不会改变了）
 randomInt: ${random.int}
