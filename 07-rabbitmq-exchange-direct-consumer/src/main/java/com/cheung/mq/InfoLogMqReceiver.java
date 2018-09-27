@@ -37,7 +37,7 @@ public class InfoLogMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("InfoLogMqReceiver：%s\r\n", msg);
+		System.out.printf("InfoLogMqReceiver接收到：{%s}\r\n", msg);
 
 	}
 

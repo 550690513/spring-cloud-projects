@@ -37,7 +37,7 @@ public class AllLogMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("AllLogMqReceiver：%s\r\n", msg);
+		System.out.printf("AllLogMqReceiver接收到：{%s}\r\n", msg);
 
 	}
 

@@ -1,6 +1,6 @@
 package com.cheung;
 
-import com.cheung.mq.MqSender;
+import com.cheung.mq.OrderMqSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ProducerApplicationTests {
 
 	@Autowired
-	private MqSender mqSender;
+	private OrderMqSender orderMqSender;
 
 	@Test
 	public void testSend() {
-		this.mqSender.send("test fanout-exchange mq");
+		this.orderMqSender.send("用户下单成功发送的mq消息");
 	}
 
 }

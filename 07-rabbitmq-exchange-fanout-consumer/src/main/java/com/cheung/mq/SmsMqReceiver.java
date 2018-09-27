@@ -36,7 +36,7 @@ public class SmsMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("SmsMqReceiver：%s\r\n", msg);
+		System.out.printf("SmsMqReceiver接收到：{%s}，开始发送短信！\r\n", msg);
 
 	}
 

@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * Log消息生产者
+ * 订单服务，消息生产者
  *
  * @author Cheung
  */
 @Component
-public class MqSender {
+public class OrderMqSender {
 
 	@Autowired
 	private AmqpTemplate amqpTemplate;
@@ -34,7 +34,7 @@ public class MqSender {
 		 * 参数三：消息
 		 */
 		this.amqpTemplate.convertAndSend(this.exchange, "", msg);// fanout广播模式，没有路由键，以“广播”的模式发布消息到所有队列
-		System.out.printf("MqSender：%s\r\n", msg);
+		System.out.printf("OrderMqSender发送：{%s}\r\n", msg);
 	}
 
 }

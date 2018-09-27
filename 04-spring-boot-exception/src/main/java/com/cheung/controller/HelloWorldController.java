@@ -26,7 +26,7 @@ public class HelloWorldController {
 		// map.put("msg", "Hello World");
 		// return map;
 
-		throw new  ApplicationException("程序运行错误！");
+		throw new ApplicationException("程序运行错误！");
 	}
 
 }

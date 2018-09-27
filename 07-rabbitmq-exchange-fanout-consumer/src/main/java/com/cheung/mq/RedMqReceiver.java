@@ -36,7 +36,7 @@ public class RedMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("发送10元红包，RedMqReceiver：%s\r\n", msg);
+		System.out.printf("RedMqReceiver接收到：{%s}，开始发送10元红包！\r\n", msg);
 
 	}
 

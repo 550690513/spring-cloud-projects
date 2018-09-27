@@ -36,7 +36,7 @@ public class PushMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("PushMqReceiver：%s\r\n", msg);
+		System.out.printf("PushMqReceiver接收到：{%s}，开始推送！\r\n", msg);
 
 	}
 

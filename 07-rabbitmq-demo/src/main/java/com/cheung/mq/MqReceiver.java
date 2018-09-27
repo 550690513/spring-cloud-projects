@@ -19,7 +19,7 @@ public class MqReceiver {
 	 */
 	@RabbitListener(queues = {QueueConfig.QUEUE_NAME})
 	public void process(String msg) {
-		System.out.printf("receiver：%s\r\n", msg);
+		System.out.printf("MqReceiver接收到：%s\r\n", msg);
 
 	}
 

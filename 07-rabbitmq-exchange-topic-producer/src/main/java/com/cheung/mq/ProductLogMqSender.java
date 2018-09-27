@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductLogMqSender {
 
-	private static final String PRODUCT_LOG_DEBUG = "product.log.debug";
-	private static final String PRODUCT_LOG_INFO = "product.log.info";
-	private static final String PRODUCT_LOG_WARN = "product.log.warn";
-	private static final String PRODUCT_LOG_ERROR = "product.log.error";
+	public static final String PRODUCT_LOG_DEBUG = "product.log.debug";
+	public static final String PRODUCT_LOG_INFO = "product.log.info";
+	public static final String PRODUCT_LOG_WARN = "product.log.warn";
+	public static final String PRODUCT_LOG_ERROR = "product.log.error";
 
 	@Autowired
 	private AmqpTemplate amqpTemplate;
@@ -31,22 +31,17 @@ public class ProductLogMqSender {
 	/**
 	 * 发送消息
 	 *
+	 * @param routingKey
 	 * @param msg
 	 */
-	public void send(String msg) {
+	public void send(String routingKey, String msg) {
 		/*
 		 * 参数一：交换器名称
 		 * 参数二：路由键
 		 * 参数三：消息
 		 */
-		this.amqpTemplate.convertAndSend(this.exchange, PRODUCT_LOG_DEBUG, PRODUCT_LOG_DEBUG + "-" + msg);
-		System.out.printf("ProductLogSender：%s\r\n", PRODUCT_LOG_DEBUG + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, PRODUCT_LOG_INFO, PRODUCT_LOG_INFO + "-" + msg);
-		System.out.printf("ProductLogSender：%s\r\n", PRODUCT_LOG_INFO + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, PRODUCT_LOG_WARN, PRODUCT_LOG_WARN + "-" + msg);
-		System.out.printf("ProductLogSender：%s\r\n", PRODUCT_LOG_WARN + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, PRODUCT_LOG_ERROR, PRODUCT_LOG_ERROR + "-" + msg);
-		System.out.printf("ProductLogSender：%s\r\n", PRODUCT_LOG_ERROR + "-" + msg);
+		this.amqpTemplate.convertAndSend(this.exchange, routingKey, msg);
+		System.out.printf("ProductLogSender发送：{%s}，（路由键：%s）\r\n", msg, routingKey);
 	}
 
 }

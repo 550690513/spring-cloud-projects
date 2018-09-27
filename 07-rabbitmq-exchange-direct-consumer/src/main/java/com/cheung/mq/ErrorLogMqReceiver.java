@@ -37,7 +37,7 @@ public class ErrorLogMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("ErrorLogMqReceiver：%s\r\n", msg);
+		System.out.printf("ErrorLogMqReceiver接收到：{%s}\r\n", msg);
 
 	}
 

@@ -17,7 +17,7 @@ public class ProducerApplicationTests {
 	@Test
 	public void testSendMqForInfoLog() throws InterruptedException {
 		for (int i = 0; i < 100; i++) {
-			this.logMqSender.sendMqForInfoLog("test info log --> " + i);
+			this.logMqSender.sendMqForInfoLog("这是一条info级别的日志 --> " + i);
 			Thread.sleep(1000);
 		}
 	}
@@ -25,7 +25,7 @@ public class ProducerApplicationTests {
 	@Test
 	public void testSendMqForErrorLog() throws InterruptedException {
 		for (int i = 0; i < 100; i++) {
-			this.logMqSender.sendMqForErrorLog("test error log --> " + i);
+			this.logMqSender.sendMqForErrorLog("这是一条error级别的日志 --> " + i);
 			Thread.sleep(1000);
 		}
 	}

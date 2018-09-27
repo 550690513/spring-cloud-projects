@@ -4,6 +4,8 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.PrintStream;
+
 /**
  * 消息发送者
  *
@@ -26,7 +28,7 @@ public class MqSender {
 		 * 参数二：消息
 		 */
 		this.amqpTemplate.convertAndSend(QueueConfig.QUEUE_NAME, msg);
-		System.out.printf("sender：%s\r\n", msg);
+		System.out.printf("MqSender发送：%s\r\n", msg);
 	}
 
 }

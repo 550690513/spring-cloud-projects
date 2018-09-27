@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserLogMqSender {
 
-	private static final String USER_LOG_DEBUG = "user.log.debug";
-	private static final String USER_LOG_INFO = "user.log.info";
-	private static final String USER_LOG_WARN = "user.log.warn";
-	private static final String USER_LOG_ERROR = "user.log.error";
+	public static final String USER_LOG_DEBUG = "user.log.debug";
+	public static final String USER_LOG_INFO = "user.log.info";
+	public static final String USER_LOG_WARN = "user.log.warn";
+	public static final String USER_LOG_ERROR = "user.log.error";
 
 	@Autowired
 	private AmqpTemplate amqpTemplate;
@@ -31,22 +31,17 @@ public class UserLogMqSender {
 	/**
 	 * 发送消息
 	 *
+	 * @param routingKey
 	 * @param msg
 	 */
-	public void send(String msg) {
+	public void send(String routingKey, String msg) {
 		/*
 		 * 参数一：交换器名称
 		 * 参数二：路由键
 		 * 参数三：消息
 		 */
-		this.amqpTemplate.convertAndSend(this.exchange, USER_LOG_DEBUG, USER_LOG_DEBUG + "-" + msg);
-		System.out.printf("UserLogSender：%s\r\n", USER_LOG_DEBUG + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, USER_LOG_INFO, USER_LOG_INFO + "-" + msg);
-		System.out.printf("UserLogSender：%s\r\n", USER_LOG_INFO + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, USER_LOG_WARN, USER_LOG_WARN + "-" + msg);
-		System.out.printf("UserLogSender：%s\r\n", USER_LOG_WARN + "-" + msg);
-		this.amqpTemplate.convertAndSend(this.exchange, USER_LOG_ERROR, USER_LOG_ERROR + "-" + msg);
-		System.out.printf("UserLogSender：%s\r\n", USER_LOG_ERROR + "-" + msg);
+		this.amqpTemplate.convertAndSend(this.exchange, routingKey, msg);
+		System.out.printf("UserLogSender发送：{%s}，（路由键：%s）\r\n", msg, routingKey);
 	}
 
 }

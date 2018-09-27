@@ -23,7 +23,16 @@ public class QueueConfig {
 	 */
 	@Bean
 	public Queue createQueue() {
-		return new Queue(QueueConfig.QUEUE_NAME);
+
+		/**
+		 * String name：队列名称
+		 * boolean durable：是否持久化（默认true）
+		 * boolean exclusive：是否排外（默认false）
+		 * boolean autoDelete：是否自动删除（默认false）
+		 */
+		// Queue queue = new Queue(QueueConfig.QUEUE_NAME, true, false, true);
+		Queue queue = new Queue(QueueConfig.QUEUE_NAME);
+		return queue;
 	}
 
 }
