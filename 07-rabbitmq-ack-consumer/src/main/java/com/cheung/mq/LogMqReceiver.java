@@ -38,7 +38,8 @@ public class LogMqReceiver {
 	 */
 	@RabbitHandler
 	public void process(String msg) {
-		System.out.printf("LogMqReceiver：%s\r\n", msg);
+		System.out.printf("LogMqReceiver接收到：{%s}\r\n", msg);
+		System.out.println("开始处理业务逻辑......");
 		throw new RuntimeException("模拟异常。。。");
 
 	}
