@@ -32,6 +32,7 @@
 		<module>08-spring-cloud-eureka-server-ha-cluster</module>
 		<module>08-spring-cloud-eureka-client-producer</module>
 		<module>08-spring-cloud-eureka-client-consumer</module>
+		<module>spring-cache</module>
 	</modules>
 
 </project>
