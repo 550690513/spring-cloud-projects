@@ -1,38 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.cheung</groupId>
 	<artifactId>spring-cloud-projects</artifactId>
+	<!--<version>${pvervion}</version>-->
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>01-spring-boot-yml</module>
-		<module>02-spring-boot-logback</module>
-		<module>03-spring-boot-multi-env</module>
-		<module>04-spring-boot-exception</module>
-		<module>05-spring-boot-actuator</module>
-		<module>06-spring-boot-admin</module>
-		<module>06-spring-boot-client</module>
-		<module>07-rabbitmq-demo</module>
-		<module>07-rabbitmq-exchange-direct-consumer</module>
-		<module>07-rabbitmq-exchange-direct-producer</module>
-		<module>07-rabbitmq-exchange-topic-consumer</module>
-		<module>07-rabbitmq-exchange-topic-producer</module>
-		<module>07-rabbitmq-exchange-fanout-consumer</module>
-		<module>07-rabbitmq-exchange-fanout-producer</module>
-		<module>07-rabbitmq-durable-consumer</module>
-		<module>07-rabbitmq-durable-producer</module>
-		<module>07-rabbitmq-ack-consumer</module>
-		<module>07-rabbitmq-ack-producer</module>
-		<module>08-spring-cloud-eureka-server</module>
-		<module>08-spring-cloud-eureka-server-ha-cluster</module>
-		<module>08-spring-cloud-eureka-client-producer</module>
-		<module>08-spring-cloud-eureka-client-consumer</module>
-		<module>spring-cache</module>
-	</modules>
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
+	<!--<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<name>Local Nexus Repository</name>
+			<url>http://10.100.21.13:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshot</id>
+			<name>Local Nexus Repository</name>
+			<url>http://10.100.21.13:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>-->
+	<!--<repositories>
+		<repository>
+			<id>repo</id>
+			<url>http://10.100.21.13:8081/nexus/content/groups/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>-->
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<!-- 设置默认激活这个配置 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>./01-spring-boot-yml</module>
+				<module>./02-spring-boot-logback</module>
+				<module>./03-spring-boot-multi-env</module>
+				<module>./04-spring-boot-exception</module>
+				<module>./05-spring-boot-actuator</module>
+				<module>./06-spring-boot-admin</module>
+				<module>./06-spring-boot-client</module>
+				<module>./07-rabbitmq-demo</module>
+				<module>./07-rabbitmq-exchange-direct-consumer</module>
+				<module>./07-rabbitmq-exchange-direct-producer</module>
+				<module>./07-rabbitmq-exchange-topic-consumer</module>
+				<module>./07-rabbitmq-exchange-topic-producer</module>
+				<module>./07-rabbitmq-exchange-fanout-consumer</module>
+				<module>./07-rabbitmq-exchange-fanout-producer</module>
+				<module>./07-rabbitmq-durable-consumer</module>
+				<module>./07-rabbitmq-durable-producer</module>
+				<module>./07-rabbitmq-ack-consumer</module>
+				<module>./07-rabbitmq-ack-producer</module>
+				<module>./08-spring-cloud-eureka-server</module>
+				<module>./08-spring-cloud-eureka-server-ha-cluster</module>
+				<module>./08-spring-cloud-eureka-client-producer</module>
+				<module>./08-spring-cloud-eureka-client-consumer</module>
+				<module>./spring-cache</module>
+			</modules>
+		</profile>
+		<profile>
+			<!-- 集成环境 -->
+			<id>jksdev</id>
+			<properties>
+				<profiles.active>jksdev</profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 </project>

@@ -15,7 +15,7 @@ public class HelloWorldController {
 
 	@RequestMapping("/hello")
 	public Map<String, Object> showHelloWorld() {
-		HashMap<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<>();
 
 		/*int a = 1 / 0;
 		System.out.println(a);// 模拟算术异常*/

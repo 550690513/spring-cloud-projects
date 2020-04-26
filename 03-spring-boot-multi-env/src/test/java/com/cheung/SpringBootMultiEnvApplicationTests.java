@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ExceptionApplicationTests {
+public class SpringBootMultiEnvApplicationTests {
 
 	@Test
 	public void contextLoads() {

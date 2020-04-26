@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Cheung
  */
 @SpringBootApplication
-public class ActuatorApplication {
+public class SpringBootClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ActuatorApplication.class, args);
+		SpringApplication.run(SpringBootClientApplication.class, args);
 	}
 }

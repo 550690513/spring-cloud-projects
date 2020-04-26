@@ -5,6 +5,7 @@
 
 	<groupId>com.cheung</groupId>
 	<artifactId>06-spring-boot-client</artifactId>
+	<!--<version>${pvervion}</version>-->
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 

@@ -25,7 +25,7 @@ public class HelloWorldController {
 
 	@RequestMapping("/hello")
 	public Map<String, Object> showHelloWorld() {
-		HashMap<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("msg", this.msg);
 		map.put("author", this.author);
 		map.put("randomInt", this.randomInt);

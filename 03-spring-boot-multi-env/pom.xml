@@ -5,7 +5,8 @@
 
 	<groupId>com.cheung</groupId>
 	<artifactId>03-spring-boot-multi-env</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<!--<version>0.0.1-SNAPSHOT</version>-->
+	<version>${profiles.active}</version>
 	<packaging>jar</packaging>
 
 	<parent>

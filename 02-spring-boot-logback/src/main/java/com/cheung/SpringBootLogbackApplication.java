@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Cheung
  */
 @SpringBootApplication
-public class Application {
+public class SpringBootLogbackApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(SpringBootLogbackApplication.class, args);
 	}
 }
